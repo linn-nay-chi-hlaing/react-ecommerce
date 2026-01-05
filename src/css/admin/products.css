@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.error-message {
+  font-size: 17px;
+  line-height: 1.5;
+  color: red;
+}
+
+.defaultXmark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.defaultXmark-btn:hover {
+  background: rgb(229, 229, 229);
+}
+
+body {
+  font-family: "Numans", sans-serif;
+}
+
+.filter-box {
+  display: flex;
+  gap: 20px;
+}
+
+.product-row {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.product-row:hover {
+  background-color: #ffffff;
+}
+
+.product-row img {
+  width: 40px;
+  height: auto;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+#product-list-wrapper {
+  overflow-x: auto;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.createProduct-section,
+.editProduct-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*display: none;*/
+  z-index: 1000;
+}
+
+.createProduct .create-xmark-icon,
+.editProduct .xmark-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.xmark-icon i,
+.create-xmark-icon i {
+  font-size: 15px;
+  color: #acacac;
+}
+
+.createProduct,
+.editProduct {
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.editProduct h2,
+.createProduct h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.editProduct-detail div,
+.createProduct-detail div {
+  width: 100%;
+}
+
+.editProduct input,
+.createProduct input,
+.editProduct select,
+.createProduct select,
+.editProduct textarea,
+.createProduct textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #acacac;
+  margin-top: 5px;
+}
+
+.editProduct .edit-gp,
+.createProduct .create-gp {
+  margin-bottom: 20px;
+}
+
+.editProduct-detail,
+.createProduct-detail {
+  display: flex;
+  column-gap: 1em;
+}
+
+.edit-btn,
+.create-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn button,
+.create-btn button {
+  background: #b68d40;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.edit-btn button:hover,
+.create-btn button:hover {
+  background: #a37e3a;
+  cursor: pointer;
+}
+
+.editProduct-btn,
+.createProduct-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .createProduct,
+  .editProduct {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-row {
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .editProduct,
+  .createProduct {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .edit-gp,
+  .create-gp {
+    margin-bottom: 1rem;
+  }
+
+  .edit-gp input,
+  .edit-gp select,
+  .create-gp input,
+  .create-gp input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 770px) {
+  #filter_status {
+    display: none;
+  }
+}
+
+@media (max-width: 675px) {
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .searchDiv {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+  }
+
+  .addBtnDiv {
+    margin-top: 15px;
+  }
+
+  .searchDiv input[type="search"] {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .search-btn {
+    margin-right: 10px;
+  }
+
+  .filter-bar h3 {
+    text-align: center;
+  }
+
+  .filter-group {
+    gap: 0;
+  }
+
+  .add-btn {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 501px) {
+  .filter-group {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    margin-right: 0;
+  }
+}

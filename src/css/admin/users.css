@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: #f8ebd3;
+}
+
+body {
+  font-family: "Numans", sans-serif;
+}
+
+.defaultXmark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.defaultXmark-btn:hover {
+  background: rgb(229, 229, 229);
+}
+
+.actions {
+  display: none;
+}
+
+.userTable {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+#user-list-wrapper,
+#order-list-wrapper {
+  overflow-x: auto;
+  /* -ms-overflow-style: none; */
+  scrollbar-width: none;
+  width: 100%;
+}
+
+#user-list-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.truncate {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th {
+  padding: 20px 25px;
+  border-bottom: 2px solid #dee2e6;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 16px 25px;
+  font-size: 0.75rem;
+}
+
+.user-row {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.user-row img {
+  border-radius: 50%;
+}
+
+.user-row:hover {
+  background-color: #ffffff;
+}
+
+.status-toggle.active {
+  color: #469223;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.status-toggle.inactive {
+  color: #f3721c;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#action {
+  position: absolute;
+  background: #fdf6e8;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.detail-row {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  padding: 0;
+}
+
+#action a {
+  color: #000000;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 0.73rem;
+}
+
+#action .edit {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.box {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.filter-group #filter_status {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.filter-group #search {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #767676;
+}
+
+.filter-group .search-btn,
+.filter-group .add-btn,
+.filter-group .addStaff-btn {
+  border-radius: 5px;
+  background: #b68d40;
+  color: #ffffff;
+  padding: 9px 13px;
+  font-size: 0.73rem;
+  border: none;
+  cursor: pointer;
+}
+
+.table-container {
+  z-index: -1;
+}
+
+.filter-group {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-group select,
+.filter-group input {
+  font-size: 0.73rem;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+
+.filter-bar h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 9px;
+}
+
+/* Edit */
+.editUser-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: none; */
+  z-index: 1000;
+}
+
+.editUser {
+  width: 35%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: none; */
+  z-index: 1001;
+}
+
+.editUser .xmark-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.xmark-icon i {
+  font-size: 15px;
+  color: #acacac;
+}
+
+.editUser h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.editUser input,
+.editUser select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #acacac;
+  margin-top: 5px;
+}
+
+.editUser .edit-gp {
+  margin-bottom: 20px;
+}
+
+.edit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn button {
+  background: #b68d40;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.edit-btn button:hover {
+  background: #a37e3a;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .editUser {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991px) {
+  .editUser {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    max-height: 90vh;
+  }
+
+  .user-row td {
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .edit-gp {
+    margin-bottom: 1rem;
+  }
+
+  .edit-gp input,
+  .edit-gp select {
+    width: 100%;
+    font-size: 0.73rem;
+  }
+}
+
+@media (max-width: 676px) {
+  #filter_status {
+    display: none;
+  }
+}
+
+@media (max-width: 501px) {
+  .filter-group {
+    gap: 0;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .searchDiv {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+  }
+
+  .searchDiv input[type="search"] {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .filter-bar h3 {
+    text-align: center;
+  }
+}

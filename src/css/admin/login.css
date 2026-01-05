@@ -1,0 +1,296 @@
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-5deg);
+  }
+}
+
+.flash-message {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flash-message.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+  border-left: 5px solid #2e7d32;
+}
+
+.flash-message.error {
+  background-color: #ffe6e6;
+  color: #c62828;
+  border-left: 5px solid #c62828;
+}
+
+.image-one {
+  position: absolute;
+  width: 120px;
+  top: 13%;
+  left: 8%;
+  animation: float 3s infinite;
+  animation-delay: 0s;
+}
+
+.image-four {
+  position: absolute;
+  width: 120px;
+  top: 23%;
+  right: 14%;
+  animation: float 3s infinite;
+  animation-delay: 1s;
+}
+
+.image-five {
+  position: absolute;
+  width: 130px;
+  bottom: 22%;
+  right: 6%;
+  animation: float 3s infinite;
+  animation-delay: 1.5s;
+}
+
+.image-seven {
+  position: absolute;
+  width: 150px;
+  bottom: 15%;
+  left: 12%;
+  animation: float 3s infinite;
+  animation-delay: 0.5s;
+}
+
+.container-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.wrap-login {
+  width: 40%;
+  z-index: 999;
+}
+
+.wrap-login p {
+  font-size: 0.83rem;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.label-input {
+  color: #000000;
+  font-size: 0.73rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.passwordInput {
+  position: relative;
+}
+
+#password {
+  padding-right: 35px;
+}
+
+#eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.username {
+  font-size: 0.73rem;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 25px;
+  background: transparent;
+  padding: 25px 0;
+
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #3d3d3d;
+
+  width: 100%;
+  border-bottom: 1px solid #212121;
+}
+
+.focus-input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.login-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.submit-btn {
+  background: #b68d40;
+  border: none;
+  color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 0.73rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #212121;
+  padding: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.73rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.submit-btn:hover {
+  background: rgb(75, 75, 75);
+}
+
+.cancel-btn:hover {
+  background: rgb(160, 160, 160);
+}
+
+.register-link {
+  color: #551a8b;
+  text-decoration: none;
+}
+
+.remember-me {
+  color: #3d3d3d;
+  font-size: 0.73rem;
+}
+
+.login-head {
+  color: #000000;
+  text-align: left;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.forgot-password {
+  /* padding-top: 8px;
+    padding-bottom: 31px; */
+  text-align: right;
+  font-weight: 400;
+}
+
+.forgot-password a {
+  font-size: 0.73rem;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.checkbox-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 1px solid #000;
+}
+
+.separator span {
+  margin: 0 10px;
+  font-size: 0.73rem;
+}
+
+@media (max-width: 1201px) {
+  .wrap-login {
+    width: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  .wrap-login {
+    width: 80%;
+  }
+
+  .image-seven {
+    width: 115px;
+    bottom: 8%;
+    left: 10%;
+  }
+
+  .image-one {
+    width: 100px;
+    top: 10%;
+    left: 8%;
+  }
+
+  .image-four {
+    width: 100px;
+    top: 18%;
+    right: 14%;
+  }
+
+  .image-five {
+    width: 110px;
+    bottom: 15%;
+    right: 6%;
+  }
+}
+
+@media (max-width: 676px) {
+  .wrap-login {
+    width: 90%;
+  }
+}

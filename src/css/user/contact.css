@@ -1,0 +1,115 @@
+.contact-section {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.contactMain {
+  width: 80%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px 0px rgba(152, 138, 201, 0.1) !important;
+}
+
+.contact-box {
+  display: flex;
+  width: 100%;
+}
+
+.contact-box svg {
+  width: 100%;
+}
+
+.contact-input {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  width: 100%;
+  background: #B68D40;
+  border-radius: 5px;
+  padding: 8px;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #9a7030;
+}
+
+.contact-box form {
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.contactHeader-box {
+  margin-bottom: 45px;
+}
+
+.contactHeader-box p {
+  line-height: 2;
+}
+
+.contactHeader-box h2,
+.contactHeader-box p {
+  text-align: center;
+}
+
+.contactHeader-box h2 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.contactHeader-box p {
+  font-size: 0.75rem;
+}
+
+.contactForm {
+  margin-bottom: 15px;
+}
+
+.contactBtn-box {
+  display: flex;
+  justify-content: end;
+}
+
+.contact-field {
+  position: relative;
+}
+
+.contact-field .checkmark {
+  position: absolute;
+  right: 2%;
+  top: 35%;
+  color: green;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .contactMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 676px) {
+  .contactMain {
+    width: 100%;
+  }
+
+  .contact-box svg {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-box svg {
+    display: none;
+  }
+}

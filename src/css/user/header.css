@@ -1,0 +1,196 @@
+.user-profile {
+  position: relative;
+}
+
+.profile-logout {
+  position: absolute;
+  background: #ffffff;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  right: 1px;
+}
+
+.profile-logout div,
+.profile-logout form button {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.profile-logout.show {
+  display: block;
+}
+
+.nav-link.dropdown-btn {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.category-dropdown {
+  background: #ffffff;
+  padding: 0 20px;
+  position: absolute;
+  font-size: 0.85rem;
+}
+
+.category-dropdown.show {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  /* background: #ffffff; */
+}
+
+/* #EBEBEB */
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  column-gap: 0.5rem;
+  text-decoration: none;
+  color: #000000;
+  padding-right: 10px;
+}
+
+.logo .text {
+  font-size: 1.25rem;
+  /* font-weight: bold; */
+}
+
+.header-login {
+  display: flex;
+  column-gap: 10px;
+}
+
+.logo svg {
+  transform: translateY(-4px); /* Adjust the value as needed */
+}
+
+.border-bottom {
+  box-shadow: inset 0 -1px 0 0 rgb(86, 85, 85);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+}
+
+#header-menu {
+  display: flex;
+}
+
+.second-header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.second-header-menu a div span {
+  font-size: 0.85rem;
+}
+
+.nav-container {
+  width: 100%;
+  background: #faf6f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+#header-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+}
+
+nav li a {
+  font-size: 0.85rem;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav li a:hover {
+  color: var(--color-btn);
+  text-decoration: none;
+}
+
+nav a div span {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 0.73rem;
+}
+
+.contact-info {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  background: black;
+  position: relative;
+}
+
+.contact-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info div {
+  position: absolute;
+  right: 20%;
+  bottom: 25%;
+  line-height: 2.5;
+  letter-spacing: 1px;
+}
+
+.contact-info h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.contact-info p {
+  font-size: 0.875rem;
+}
+
+.contact-info a {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  #header-menu .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    font-size: 0.85rem;
+    display: block;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+/* #root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+} */
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+}
+
+.container button {
+  padding: 10px 16px;
+  margin: 12px;
+  background: #B68D40;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  font-family: "Numans", sans-serif;
+}
+
+.flash-message {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flash-message.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+  border-left: 5px solid #2e7d32;
+}
+
+.flash-message.error {
+  background-color: #ffe6e6;
+  color: #c62828;
+  border-left: 5px solid #c62828;
+}
+
+.black {
+  color: #000;
+}
+
+.dashboard {
+  margin: 0 1rem;
+  padding: 0.625rem 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 0 1.5rem;
+}
+
+.card-text {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  background-color: #fff7e9;
+  border-radius: 5px;
+  padding: 0.75rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.cards-icon i {
+  font-size: 1.563rem;
+  color: #b68d40;
+}
+
+.card h1 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.card .number {
+  font-size: 0.875rem;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.first-chart-section {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 1.25rem;
+}
+
+.second-chart-section {
+  /* padding-bottom: 1.25rem; */
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-chart,
+.second-chart,
+.third-chart {
+  background: #fdf6e8;
+  padding: 1.25rem;
+}
+
+.first-chart,
+.second-chart {
+  width: 49%;
+}
+
+.third-chart {
+  width: 69%;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.chart-title {
+  display: flex;
+  gap: 0 10px;
+}
+
+.chart-title i {
+  color: #b68d40;
+}
+
+.chart-title h3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.browser-table th,
+.browser-table td {
+  font-size: 0.73rem;
+}
+
+.browser-table th {
+  padding: 20px 16px;
+}
+
+.browser-table td {
+  padding: 16px;
+}
+
+.browser-box {
+  background-color: #fdf6e8;
+  width: 29%;
+}
+
+.browser-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 1261px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(40%, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 1201px) {
+  .first-chart-section,
+  .second-chart-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .first-chart,
+  .second-chart,
+  .third-chart {
+    width: 100%;
+  }
+
+  .browser-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  /* .cards {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(40%, 1fr));
+    } */
+}
+
+@media (max-width: 676px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(40%, 1fr));
+  }
+
+  canvas {
+    height: 250px !important;
+  }
+
+  .browser-table th {
+    padding: 16px 18px;
+    border-bottom: 2px solid #dee2e6;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .browser-table td {
+    padding: 12px 18px;
+    font-size: 0.6rem;
+  }
+
+  .chart-title h3 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  canvas {
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 451px) {
+  .chart-title i {
+    font-size: 0.75rem;
+  }
+  .chart-title h3 {
+    font-size: 0.625rem;
+  }
+}

@@ -1,0 +1,185 @@
+.payment-section {
+  margin: 30px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.payment-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.payment-container h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+}
+
+.payment-form label {
+  display: block;
+  margin: 20px 0 5px;
+  font-size: 0.775rem;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="email"] {
+  width: 100%;
+  font-size: 0.775rem;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  background: transparent;
+}
+
+.stripe-input {
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+}
+
+.payment-form input[type="email"] {
+  border: none;
+}
+
+.email-field {
+  position: relative;
+}
+
+.email-field .checkmark {
+  position: absolute;
+  right: 10px;
+  top: 15%;
+  color: green;
+  font-size: 18px;
+}
+
+.payment-row {
+  display: flex;
+  column-gap: 40px;
+}
+
+.payment-col {
+  flex: 1;
+}
+
+.payment-form button {
+  width: 100%;
+  background-color: #B68D40;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.payment-form button:hover {
+  background-color: #9a7030;
+}
+
+@media (max-width: 1201px) {
+  .payment-container h2 {
+    font-size: 1rem;
+  }
+
+  .payment-form label {
+    font-size: 0.7rem;
+  }
+
+  .payment-form input[type="text"],
+  .payment-form input[type="email"] {
+    font-size: 0.7rem;
+  }
+
+  .stripe-input {
+    font-size: 0.7rem;
+  }
+
+  .payment-form button {
+    font-size: 14px;
+  }
+  .payment-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .payment-container h2 {
+    font-size: 0.95rem;
+  }
+
+  .payment-form label {
+    font-size: 0.65rem;
+  }
+
+  .payment-form input[type="text"],
+  .payment-form input[type="email"] {
+    font-size: 0.65rem;
+  }
+
+  .stripe-input {
+    font-size: 0.65rem;
+  }
+
+  .payment-form button {
+    font-size: 13px;
+  }
+  .payment-container {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 676px) {
+  .payment-container h2 {
+    font-size: 0.85rem;
+  }
+
+  .payment-form label {
+    font-size: 0.6rem;
+  }
+
+  .payment-form input[type="text"],
+  .payment-form input[type="email"] {
+    font-size: 0.6rem;
+  }
+
+  .stripe-input {
+    font-size: 0.6rem;
+  }
+
+  .payment-form button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 451px) {
+  .payment-container h2 {
+    font-size: 0.75rem;
+  }
+
+  .payment-form label {
+    font-size: 0.55rem;
+  }
+
+  .payment-form input[type="text"],
+  .payment-form input[type="email"] {
+    font-size: 0.55rem;
+  }
+
+  .stripe-input {
+    font-size: 0.55rem;
+  }
+
+  .payment-form button {
+    font-size: 11px;
+  }
+}

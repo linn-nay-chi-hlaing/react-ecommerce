@@ -1,0 +1,145 @@
+.error-message {
+  font-size: 17px;
+  line-height: 1.5;
+  color: red;
+}
+
+.defaultXmark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.defaultXmark-btn:hover {
+  background: rgb(229, 229, 229);
+}
+
+.order-status.completed {
+  color: #469223;
+  border: none;
+}
+
+.order-status.pending {
+  color: #f3721c;
+  border: none;
+}
+
+.order-status.cancelled {
+  color: #d94545;
+  border: none;
+}
+
+.orderUpdate-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.order-row {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.disabled-row {
+  cursor: default;
+}
+
+.disabled-row:hover {
+  background-color: none;
+}
+
+.order-row:hover {
+  background-color: #ffffff;
+}
+
+.orderUpdate .xmark-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.orderUpdate {
+  width: 35%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.orderUpdate form {
+  /* background-color: pink; */
+  padding: 10px 15px;
+}
+
+.orderUpdate form span,
+.orderUpdate form .status {
+  font-size: 0.75rem;
+}
+
+.orderUpdate form .status {
+  padding: 5px;
+  border-radius: 5px;
+  /* margin-left: 95px; */
+}
+
+.orderTitle {
+  display: inline-block;
+  width: 80px;
+}
+
+.orderEdit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.orderEdit-btn button {
+  background: #b68d40;
+  border: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+.orderEdit-btn button:hover {
+  background: #a37e3a;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .orderUpdate {
+    width: 45%;
+  }
+}
+
+@media (max-width: 991px) {
+  .orderUpdate {
+    width: 55%;
+  }
+}
+
+@media (max-width: 676px) {
+  .orderUpdate {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .orderUpdate {
+    width: 90%;
+  }
+}
+
+@media (max-width: 451px) {
+  .orderUpdate {
+    width: 95%;
+  }
+}

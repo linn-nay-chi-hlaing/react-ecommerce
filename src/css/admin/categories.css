@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.error-message {
+  font-size: 17px;
+  line-height: 1.5;
+  color: red;
+}
+
+.defaultXmark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.defaultXmark-btn:hover {
+  background: rgb(229, 229, 229);
+}
+
+body {
+  font-family: "Numans", sans-serif;
+}
+
+.category-row {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.category-row:hover {
+  background-color: #ffffff;
+}
+
+.categoryTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.editCategory-section,
+.createCategory-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.editCategory .xmark-icon,
+.createCategory .create-xmark-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.xmark-icon i,
+.create-xmark-icon i {
+  font-size: 15px;
+  color: #acacac;
+}
+
+.editCategory,
+.createCategory {
+  width: 35%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.editCategory h2,
+.createCategory h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.editCategory input,
+.createCategory input,
+.editCategory select,
+.createCategory select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #acacac;
+  margin-top: 5px;
+}
+
+.editCategory .edit-gp,
+.createCategory .create-gp {
+  margin-bottom: 20px;
+}
+
+.edit-btn,
+.create-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn button,
+.create-btn button {
+  background: #b68d40;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.edit-btn button:hover,
+.create-btn button:hover {
+  background: #a37e3a;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .editCategory {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    max-height: 90vh;
+  }
+
+  .edit-gp {
+    margin-bottom: 1rem;
+  }
+
+  .edit-gp input,
+  .edit-gp select {
+    width: 100%;
+    font-size: 0.73rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .searchDiv {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+  }
+
+  .addBtnDiv {
+    margin-top: 15px;
+  }
+
+  .searchDiv input[type="search"] {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .search-btn {
+    margin-right: 10px;
+  }
+
+  .filter-bar h3 {
+    text-align: center;
+  }
+
+  .filter-group {
+    gap: 0;
+  }
+
+  .addStaff-btn {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 501px) {
+  .filter-group {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    margin-right: 0;
+  }
+}
